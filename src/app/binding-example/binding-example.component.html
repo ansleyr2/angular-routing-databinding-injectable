@@ -1,0 +1,19 @@
+<p>
+binding-example works!
+</p>
+<p>
+
+</p>
+<!-- property binding -->
+<input id="firstname" [value]="firstname" />
+<!-- Event binding -->
+<button (click)="displayName(firstname)">Click Me</button>
+<br/><br/>
+<!-- two way binding -->
+<select [(ngModel)]="favSport">
+  <option value="Cricket">Cricket</option>
+  <option value="Football">Football</option>
+  <option value="Wrestling">Wrestling</option>
+</select>
+<br/>
+Selected : {{favSport}}

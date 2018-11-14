@@ -1,0 +1,14 @@
+<p>
+hero-list works!
+</p>
+<h1>{{title}}</h1>
+  <h2>My favorite hero is: {{heroes[0].name}}</h2>
+  <input type="text" [(ngModel)]="name" id="name" />
+  <button (click)="addHero()">Add</button>
+  <p [ngClass]="text-bold">Heroes:</p>
+  <ul>
+    <li *ngFor="let hero of heroes">
+      {{ hero.name }}
+      </li>
+  </ul>
+  <p *ngIf="heroes.length > 3">There are many heroes!</p>

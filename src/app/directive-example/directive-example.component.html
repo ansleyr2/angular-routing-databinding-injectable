@@ -1,0 +1,13 @@
+<p>
+directive-example works!
+</p>
+<p>
+  Hover over the list elements to see color change and underline
+</p>
+
+  <p [ngClass]="text-bold">Heroes:</p>
+  <ul>
+    <li class="li-underline" *ngFor="let hero of heroes" appCustomDirective>
+      {{ hero.name }}
+      </li>
+  </ul>

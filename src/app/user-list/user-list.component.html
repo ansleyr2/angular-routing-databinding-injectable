@@ -1,0 +1,15 @@
+<p>
+user-list works!
+</p>
+<p>Parent child component interaction</p><br/>
+<p>Click on the name to see details</p>
+<div *ngIf="nameFromChild">Viewed {{nameFromChild}}'s data</div>
+<div *ngIf="users.length>0">
+  <ul>
+    <li *ngFor="let user of users" (click)="showUser(user)">{{user.first_name}}</li>
+  </ul>
+</div>
+<div *ngIf="users.length == 0">
+  loading...
+</div>
+<app-user-list-child *ngIf="showchild" [first_name]="first_name" [last_name]="last_name" [avatar]="avatar" (notifyToParent)="showViewedInfo($event)"></app-user-list-child>
