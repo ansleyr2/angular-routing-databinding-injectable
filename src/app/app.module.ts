@@ -13,12 +13,18 @@ import { BindingExampleComponent } from './binding-example/binding-example.compo
 import { CustomDirectiveDirective } from './custom-directive.directive';
 import { DirectiveExampleComponent } from './directive-example/directive-example.component';
 
+import { MyComponentComponent } from './my-component/my-component.component';
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'herolist', component: HeroListComponent },
   { path: 'userlist', component: UserListComponent },
   {path: 'bindingeg', component: BindingExampleComponent },
-    {path: 'directiveeg', component: DirectiveExampleComponent }
+  {path: 'directiveeg', component: DirectiveExampleComponent },
+  {
+    path: 'todo',
+    loadChildren: './todo-module/todo.module#TodoModule'
+  },
 ];
 
 @NgModule({
@@ -31,6 +37,7 @@ const appRoutes: Routes = [
     UserListChildComponent,
     CustomDirectiveDirective,
     DirectiveExampleComponent,
+    MyComponentComponent,
   ],
   imports: [
     BrowserModule,
